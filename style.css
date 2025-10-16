@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #161616;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+}
+
+html {
+  font-size: clamp(14px, 1vw, 16px);
+}
+
+section {
+  max-width: 1000px;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+main section {
+  border-radius: 1.3rem;
+}
+main section img {
+  width: 100%;
+  border-radius: 1.3rem;
+}
+main .view2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 1.5rem;
+  background-color: #1E1E1E;
+}
+main .view2 .top {
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+main .view2 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .view2 .bottom h1 {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+main .view2 .bottom p {
+  color: rgb(145, 144, 144);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+main .view2 .bottom a {
+  text-decoration: none;
+  color: rgb(214, 212, 212);
+}
+main .view2 .bottom a i {
+  background-color: #555555;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 850px) {
+  main {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+  main .view1 {
+    width: 50%;
+  }
+  main .view2 {
+    width: 50%;
+    padding: 4rem;
+    justify-content: space-between;
+  }
+  main .view2 .bottom h1 {
+    text-transform: uppercase;
+    font-size: 4.2rem;
+  }
+  main .view2 .bottom p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  main .view2 .bottom .last {
+    display: flex;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
