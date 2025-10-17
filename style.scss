@@ -27,8 +27,14 @@ section {
     max-width: 1000px;
 }
 
-.c1, .c2, .c3{
+.c1,
+.c2,
+.c3 {
     max-width: 666.66px;
+}
+
+.contact{
+    max-width: 2000px;
 }
 
 
@@ -84,11 +90,12 @@ main {
     }
 }
 
-.card{
+.card {
     padding: 1rem;
     width: 100%;
     @include flex(1rem);
-    .c1{
+
+    .c1 {
         width: 100%;
         background-image: url(one.webp);
         background-size: cover;
@@ -99,7 +106,8 @@ main {
         justify-content: space-between;
         padding: 0.8rem;
     }
-    .c2{
+
+    .c2 {
         width: 100%;
         background-image: url(two.webp);
         background-size: cover;
@@ -110,7 +118,8 @@ main {
         justify-content: space-between;
         padding: 0.8rem;
     }
-    .c3{
+
+    .c3 {
         width: 100%;
         background-image: url(three.webp);
         background-size: cover;
@@ -122,7 +131,7 @@ main {
         padding: 0.8rem;
     }
 
-    .info{
+    .info {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -130,22 +139,25 @@ main {
         border-radius: 10px;
         padding: 1.3rem 1rem;
         backdrop-filter: blur(15px);
-        h1{
+
+        h1 {
             font-size: 1.5rem;
             font-weight: 400;
         }
-        h2{
+
+        h2 {
             font-size: 1.1rem;
             font-weight: 400;
         }
     }
 
-    .icons{
+    .icons {
         padding: 1rem;
         display: flex;
         justify-content: flex-end;
         gap: 1rem;
-        i{
+
+        i {
             padding: 0.9rem;
             border: 0.5px solid rgb(163, 163, 163);
             backdrop-filter: blur(50px);
@@ -156,6 +168,7 @@ main {
 
 aside {
     padding: 2rem;
+
     .numbers {
         display: flex;
         justify-content: space-between;
@@ -194,6 +207,47 @@ aside {
     }
 }
 
+.forth {
+    .top {
+        h2 {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.box1 {
+    width: 100%;
+    padding: 1rem;
+
+    .contact {
+        @include flex(1rem);
+        align-items: center;
+        background-color: #CEBD63;
+        color: black;
+        border-radius: 1.3rem;
+        padding: 2rem;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 4vw 25vw;
+            border-radius: 10px;
+        }
+    }
+}
+
 @media(min-width:850px) {
     main {
         flex-direction: row;
@@ -226,7 +280,8 @@ aside {
             }
         }
     }
-    .second{
+
+    .second {
         flex-direction: row-reverse;
     }
 
@@ -255,8 +310,43 @@ aside {
         }
     }
 
-    .card{
+    .card {
         flex-direction: row;
         justify-content: center;
+    }
+
+    .forth {
+        .top {
+            h2 {
+                text-transform: uppercase;
+                font-size: 3.8rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .box1 {
+        display: flex;
+        justify-content: center;
+        .contact {
+            overflow: hidden;
+            padding: 4rem;
+            flex-direction: row;
+            gap: 40rem;
+            
+            align-items: flex-end;
+
+            h1 {
+                font-size: 4.5rem;
+            }
+
+            .lower {
+                width: 28rem;
+            }
+
+            button {
+                padding: 1rem 4rem;
+            }
+        }
     }
 }
