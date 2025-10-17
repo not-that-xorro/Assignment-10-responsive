@@ -1,97 +1,262 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: #161616;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
 }
-html{
+
+html {
     font-size: clamp(14px, 1vw, 16px);
 }
-@mixin flex($gap:0){
+
+@mixin flex($gap: 0) {
     display: flex;
     flex-direction: column;
     gap: $gap;
 }
 
-section{
+section {
     max-width: 1000px;
 }
 
+.c1, .c2, .c3{
+    max-width: 666.66px;
+}
 
-main{
+
+main {
     padding: 1rem;
     @include flex(0.5rem);
     justify-content: center;
-    section{
+
+    section {
         border-radius: 1.3rem;
-        img{
+
+        img {
             width: 100%;
             border-radius: 1.3rem;
         }
     }
-    .view2{
+
+    .view2 {
         @include flex(3.5rem);
         padding: 1.5rem;
         background-color: #1E1E1E;
-        .top{
+
+        .top {
             font-size: 0.5rem;
             font-weight: 400;
         }
-        .bottom{
+
+        .bottom {
             @include flex(1.5rem);
-            h1{
+
+            h1 {
                 font-size: 2.6rem;
                 font-weight: 400;
             }
-            p{
+
+            p {
                 color: rgb(145, 144, 144);
                 font-size: 1.5rem;
                 line-height: 1.5;
             }
-            a{
-                i{
+
+            a {
+                i {
                     background-color: #555555;
                     padding: 0.5rem;
                     border-radius: 50%;
                 }
+
                 text-decoration: none;
                 color: rgb(214, 212, 212);
             }
         }
     }
 }
-@media(min-width:850px){
-    main{
+
+.card{
+    padding: 1rem;
+    width: 100%;
+    @include flex(1rem);
+    .c1{
+        width: 100%;
+        background-image: url(one.webp);
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        aspect-ratio: 1/1;
+        @include flex();
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+    .c2{
+        width: 100%;
+        background-image: url(two.webp);
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        aspect-ratio: 1/1;
+        @include flex();
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+    .c3{
+        width: 100%;
+        background-image: url(three.webp);
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        aspect-ratio: 1/1;
+        @include flex();
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgb(209, 209, 209);
+        border-radius: 10px;
+        padding: 1.3rem 1rem;
+        backdrop-filter: blur(15px);
+        h1{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        h2{
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+    }
+
+    .icons{
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        i{
+            padding: 0.9rem;
+            border: 0.5px solid rgb(163, 163, 163);
+            backdrop-filter: blur(50px);
+            border-radius: 50px;
+        }
+    }
+}
+
+aside {
+    padding: 2rem;
+    .numbers {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left {
+        @include flex(2rem);
+        text-align: center;
+
+        h2 {
+            color: rgb(145, 144, 144);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.7rem;
+            font-weight: 400;
+        }
+    }
+
+    .right {
+        @include flex(2rem);
+        text-align: center;
+
+        h2 {
+            color: rgb(145, 144, 144);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.7rem;
+            font-weight: 400;
+        }
+    }
+}
+
+@media(min-width:850px) {
+    main {
         flex-direction: row;
         gap: 0.8rem;
-        .view1{
+
+        .view1 {
             width: 50%;
         }
-        .view2{
+
+        .view2 {
             width: 50%;
             padding: 4rem;
             justify-content: space-between;
-            .bottom{
-                h1{
+
+            .bottom {
+                h1 {
                     text-transform: uppercase;
                     font-size: 4.2rem;
                 }
-                p{
+
+                p {
                     font-size: 1.6rem;
                     line-height: 1.6;
                 }
-                .last{
+
+                .last {
                     display: flex;
                     gap: 1rem;
                 }
             }
         }
+    }
+    .second{
+        flex-direction: row-reverse;
+    }
+
+    aside {
+        .numbers {
+            justify-content: center;
+            gap: 15rem;
+        }
+
+        .left {
+            flex-direction: row;
+            gap: 15rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        .right {
+            flex-direction: row;
+            gap: 15rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .card{
+        flex-direction: row;
+        justify-content: center;
     }
 }
