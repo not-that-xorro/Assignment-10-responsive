@@ -33,7 +33,11 @@ section {
     max-width: 666.66px;
 }
 
-.contact{
+.contact {
+    max-width: 2000px;
+}
+
+.grid {
     max-width: 2000px;
 }
 
@@ -248,6 +252,121 @@ aside {
     }
 }
 
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 18% 100% 18%;
+    grid-template-areas: "g1"
+        "g2"
+        "g3";
+    gap: 1rem;
+    padding: 1rem;
+
+    .g1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: g1;
+        background-color: #1E1E1E;
+        border-radius: 10px;
+        padding: 1.5rem;
+
+        .icons {
+            display: flex;
+            gap: 1rem;
+
+            i {
+                padding: 0.9rem;
+                border: 0.5px solid rgb(163, 163, 163);
+                backdrop-filter: blur(50px);
+                border-radius: 50px;
+            }
+        }
+
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 300;
+        }
+
+    }
+
+    .g2 {
+        grid-area: g2;
+        background-color: #1E1E1E;
+        border-radius: 10px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h1 {
+            font-weight: 400;
+            line-height: 2.5;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            line-height: 2.5;
+            transition: all 0.5s ease;
+        }
+
+        h2:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #CEBD63;
+            border: none;
+            outline: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+
+    }
+
+
+
+    .g3 {
+        grid-area: g3;
+        background-color: #1E1E1E;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        h1 {
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+
+        div {
+            font-size: 1.3rem;
+        }
+
+        i {
+            background-color: #555555;
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+    }
+}
+
 @media(min-width:850px) {
     main {
         flex-direction: row;
@@ -283,6 +402,48 @@ aside {
 
     .second {
         flex-direction: row-reverse;
+
+        .para {
+            display: flex;
+            gap: 2vw;
+        }
+
+        .view2 {
+            .bottom {
+                h1 {
+                    font-size: 3.5rem;
+                }
+
+                .para {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .third {
+
+        .para {
+            display: flex;
+            gap: 2vw;
+        }
+
+        .view2 {
+            .bottom {
+                h1 {
+                    font-size: 3.5rem;
+                }
+
+                .para {
+                    p {
+                        text-align: justify;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 
     aside {
@@ -328,12 +489,13 @@ aside {
     .box1 {
         display: flex;
         justify-content: center;
+
         .contact {
             overflow: hidden;
             padding: 4rem;
             flex-direction: row;
             gap: 40rem;
-            
+
             align-items: flex-end;
 
             h1 {
@@ -347,6 +509,39 @@ aside {
             button {
                 padding: 1rem 4rem;
             }
+        }
+    }
+
+    .grid {
+        grid-template-columns: 1fr 4.5fr;
+        grid-template-rows: 4fr 1fr;
+        grid-template-areas: "g1 g2"
+            "g1 g3";
+
+        .g1 {
+            grid-area: g1;
+        }
+
+        .g2 {
+            flex-direction: row;
+            justify-content: space-around;
+            grid-area: g2;
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+                line-height: 3.5;
+            }
+        }
+
+        .g3 {
+            grid-area: g3;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1rem;
         }
     }
 }
